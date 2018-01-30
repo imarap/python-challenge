@@ -1,0 +1,191 @@
+
+/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */
+body {
+  background: #DDDBDB;
+}
+
+h1 {
+  font-size: 30px;
+  color: #00A1A1;
+}
+
+h2 {
+  font-size: 20px;
+  color: #00A1A1;
+}
+
+h3 {
+  font-size: 10px;
+  color: #00A1A1;
+}
+
+/* Giving our navbar some padding and a background color */
+
+.navbar {
+  padding: 10px;
+  background-color: #84FAFA;
+  /*overflow: hidden;
+  position: relative;*/
+}
+
+/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+
+.navbar li {
+  display: inline-block;
+  padding: 4px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Getting rid of the default link styles here */
+.navbar li a {
+  color: #1F1E1E;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 0px;
+  /*float: left;*/
+}
+.latit {
+  color: #FC0505;
+}
+/*
+.dropdown {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #f9f9f9;
+} 
+*/
+.visdiv {
+  /*display: none;*/
+  display: inline-block;
+  position: absolute;
+  /*background-color: #f9f9f9;*/
+  /*width: 20px; */
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  z-index: 1;
+}
+
+.visdiv a {
+  float: none;
+  color: #3B3A3A;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/*
+.visdiv a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .visdiv {
+  display: block;
+} */
+/* Styling the header, giving it a height, a background color, and some top padding */
+.header {
+  /*height: 100px;*/
+  padding: 1px;
+  /*background: #cdcdcd;*/
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Centering our h1 tag inside our header, giving it a little padding, removing its margin */
+.header h1 {
+  padding: 60px;
+  margin: 0;
+  color: #000;
+  text-align: center;
+}
+
+/* Giving the .post element margin on 3 sides */
+.post {
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+/*
+table {
+  margin-right: 50px;
+  margin-left: 0px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+*/
+
+.tdl {
+  padding: 10px;
+  background-color: #F4F5F7;
+  align-content: center;
+  vertical-align: top;
+  height: 500px;
+}
+
+.tdv {
+  padding: 10px;
+  background-color: #F4F5F7;
+  align-content: center;
+  vertical-align: top;
+  height: 400px;
+  width: 320px;
+}
+.tdvis {
+  padding: 10px;
+  background-color: #F4F5F7;
+  align-content: center;
+  height: 100px;
+  width: 110px;
+}
+
+.tdfooter {
+  background-color: #43474E;
+  height: 40px;
+  width: 1200px;
+  align-content: center;
+  vertical-align: center;
+  color: #F4F5F7
+}
+.imgvis {
+  width: 200;
+  height: 140;
+  float: left;
+}
+
+/* BONUS */
+/* #nav-select {
+  display: none;
+} */
+
+/* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
+@media (max-width: 480px) {
+  .navbar li {
+    padding: 10px;
+  }
+
+  .post {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  /* BONUS */
+  /* .navbar ul {
+    display: none;
+  }
+
+  #nav-select {
+    display: block;
+  } */
+}
