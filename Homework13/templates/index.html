@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars News</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New data</a></p>
+    </div>
+
+    <!-- Mars Dictionary -->
+    <div class="row" id="mars-listings">
+      <h2>Latest Mars News</h2>
+      <strong>{{ listings['News_Title']}} </strong><br/>
+      {{ listings['News_Para']}}
+      <br/><br/>
+    </div>
+    <div class="row showgrid">
+      <div class="col-md-8">
+        <h4 class="heading">The most recent Mars Image</h4><br/>
+        <!-- <img src=" {{ listings['Featured_Img_URL'] }} " alt="Featured Mars Image"> This line did not work, so I put a static url-->
+        <img src="https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA16883-1920x1200.jpg" 
+          alt="Featured Mars Image" height="500" width="700">
+      </div>
+      <div class="col-md-4">
+        <h3>Current Weather on Mars</h3>
+        {{ listings['Mars_Weather']}}
+        <br/><br/><br/>
+        <h3>Facts about Mars</h3>
+        {{ listings['Mars_Facts'] }}
+        <!-- This code did not work. 
+        {% for f in listings['Mars_Facts'] %}
+          {{ f['fact'] }}
+          {{ f['data_fact']}}
+        {% endfor %}
+        -->
+        <br/><br/><br/>
+      </div>
+    </div>
+    <div class="row showgrid">
+      <center><h1>Mars Hemispheres</h1></center><hr><br/>
+      <div class="col-md-8">
+        {% for mar in listings['Mars_Hemispheres'] %}
+            <h2>{{ mar['title'] }}</h2><br/>
+            <img src= " {{ mar['img_url'] }} " alt="Mars Hemisphere" height="300" width="300">
+        {% endfor %}
+        <br/><br/>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
