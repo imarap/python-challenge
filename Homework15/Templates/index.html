@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <title>Belly Button Biodiversity</title>
+  <style>
+    .heading {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+        <h1 class='heading'>Belly Button Biodiversity <br/>Dashboard</h1>
+        <p class='heading'>Use the interactive charts below to explore the dataset</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+          <form class="form-inline">
+            <h2>Select Sample:</h2>
+            <select id="selDataset" onchange="optionChanged(this.value)">
+              <option value="BB_940">BB_940</option>
+              <option value="BB_941">BB_941</option>
+              <option value="BB_943">BB_943</option>
+              <option value="BB_944">BB_944</option>
+              <option value="BB_945">BB_945</option>
+              <option value="BB_946">BB_946</option>
+              <option value="BB_947">BB_947</option>
+              <option value="BB_948">BB_948</option>
+              <option value="BB_949">BB_949</option>
+              <option value="BB_950">BB_950</option>
+            </select>
+          </form>
+        </div>
+        <div class="col-md-4">
+            <div id="pie"></div>
+        </div>
+        <div class="col-md-4">
+          Belly Button Washing Frequency placeholder
+        </div>
+    </div>
+    <div><p><br><br><br></p></div>
+    <div class="row">
+        <div class="col-lg-12">
+            Scatter chart placeholder space
+        </div>
+    </div>
+  </div>
+  <script src="../plots.js"></script>
+</body>
+</html>
