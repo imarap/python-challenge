@@ -97,7 +97,7 @@ def get_otu_samples(sample='BB_940'):
     bbd_sample = []
     bbd_data = []
     for index, row in sorted_df.iterrows():
-        bbd_otu.append(int(row['otu_id']))
+        bbd_otu.append(str(int(row['otu_id'])))
         bbd_sample.append(int(row[sample]))
     bbd_dict = {
         "otu_ids": bbd_otu,

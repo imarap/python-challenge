@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>Belly Button Biodiversity</title>
+  <style>
+    .heading {
+      text-align: center;
+    }
+  </style>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+        <h1 class='heading'>Belly Button Biodiversity <br/>Dashboard</h1>
+        <p class='heading'>Use the interactive charts below to explore the dataset</p>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+          <form class="form-inline">
+            <h2>Select Sample:</h2>
+            <select id="selDataset" onchange="optionChanged(this.value)">
+              <option value="BB_940">BB_940</option>
+              <option value="BB_941">BB_941</option>
+              <option value="BB_943">BB_943</option>
+              <option value="BB_944">BB_944</option>
+              <option value="BB_945">BB_945</option>
+              <option value="BB_946">BB_946</option>
+              <option value="BB_947">BB_947</option>
+              <option value="BB_948">BB_948</option>
+              <option value="BB_949">BB_949</option>
+              <option value="BB_950">BB_950</option>
+            </select>
+          </form>
+          <div id="textmetadata"></div>
+          <div id="pie"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+          <div id="divbuble">
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static',filename='js/plots.js') }}"></script>
+</body>
+</html>
