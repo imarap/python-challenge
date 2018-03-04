@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>D3Times</title>
+	<link rel="stylesheet" href="assets/css/d3Style.css">
+	<!-- Latest compiled and minified CSS & JS -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-2"><img src="fishbowl.png" height="240" width="200"></div>
+		<div class="jumbotron text-center">
+			<h1>Data Journalism and D3</h1>
+			<h2>Poverty Vs. Healthcare</h2>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-md-offset-0">
+				<h1>D3Times</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12  col-md-9 col-md-offset-0">
+				<div class="embed-responsive embed-responsive-16by9"> <!--<div class="iframeContainer">-->
+					<iframe class="embed-responsive-item" id="iframe" src="d3.html" allowfullscreen></iframe>
+					<!-- Students: Add a responsive iframe here that includes the d3.html file -->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12  col-md-9 col-md-offset-0">
+				<div class="article">
+					<!-- Students: Replace with your analysis of the data -->
+					<p><br/><br/>
+					The purpose of this project is to analyze the poverty status versus the healthcare status of coverage
+					by each of US state. The data was obtained from two sources: the US Census Bureau Fact Finder page a
+					Behavioral Risk Factor Surveillance System. <br/>Once the data was installed in a excel.csv format, it was 
+					accessed in d3. The data is included below.
+					</p>
+					Based on the data plotted we can conclude:<br/>
+					<ul>
+						<li>There exists a correlation between poverty status and population with poor healthcare coverage.
+							States as Missisipi that poverty of 21.5% and lacks healthcare coverage of 18.8% versus states as Massachusets
+							with a poverty level of 11.6% and lacks healthcare coverage of 4.6%. 
+						</li>
+					</ul>
+					<div class="iframeContainer"></div>
+						<iframe id="iframe" src="poverty_healthcare_data.html" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- Footer-->
+	<div id="footer" class="footer">
+		<br/>
+		<p><i>Copyright &copy; UC Berkeley Extension: Data Boot Camp, 2017-2018</i>  <!-- Insert your Copyright Info here --></p>
+	</div>
+</body>
+</html>
